@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- 引入jquery.js -->
+    <script src="https://cdn.bootcss.com/echarts/4.1.0.rc2/echarts.min.js"></script>
+    <script src="static/echarts-liquidfill.js"></script>
+    <style>
+        html,body{
+            height: 100%;
+        }
+        body{
+            margin: 0;
+        }
+    </style>
+</head>
+<body style="background-color: rgb(245,255,250)">
+
+<div class="div1">
+    <nav class="navbar navbar-inverse">
+  <div style="background-color: rgb(166,230,225);" class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">仓储中心数据网站</a>
+    </div>
+    <div style="background-color: rgb(166,230,225);color: rgb(0,0,0)" class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#" class="text">主页</a></li>
+        <li><a href="#" class="text">页面一</a></li>
+          <li><a href="#" class="text">页面二</a></li>
+          <li><a href="#" class="text">页面三</a></li>
+          <li><a href="#" class="text">页面四</a></li>
+          <li><a href="#" class="text">页面五</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div style="position: relative;width: 95%;height: 70%;margin-left: 2.5%;margin-right: 2.5%;">
+        <table class="table table-bordered">
+            <thead>
+                <tr style="background-color: rgb(10,134,175);color: #fff;font-size: 20px;">
+                    <th colspan="2">时间段</th>
+                    <th colspan="3"><48H</th>
+                    <th colspan="3"><72H</th>
+                    <th colspan="3"><120H</th>
+                    <th colspan="3"><360H</th>
+                    <th colspan="3"><510H</th>
+                    <th colspan="3">>510H</th>
+                </tr>
+                <tr>
+                    <th>框牌</th>
+                    <th>责任人</th>
+                    <th>笔数</th>
+                    <th>件数</th>
+                    <th>金额</th>
+                    <th>笔数</th>
+                    <th>件数</th>
+                    <th>金额</th>
+                    <th>笔数</th>
+                    <th>件数</th>
+                    <th>金额</th>
+                    <th>笔数</th>
+                    <th>件数</th>
+                    <th>金额</th>
+                    <th>笔数</th>
+                    <th>件数</th>
+                    <th>金额</th>
+                    <th>笔数</th>
+                    <th>件数</th>
+                    <th>金额</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>AAA</td>
+                    <td>张三</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                </tr>
+                <tr>
+                    <td>AAA</td>
+                    <td>张三</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                </tr>
+                <tr>
+                    <td>AAA</td>
+                    <td>张三</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                </tr>
+                <tr>
+                    <td>AAA</td>
+                    <td>张三</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                </tr>
+                <tr>
+                    <td>AAA</td>
+                    <td>张三</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">BBB</td>
+                    <td>李四</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                </tr>
+                <tr>
+                    <td>李四</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                </tr>
+                <tr>
+                    <td>李四</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
